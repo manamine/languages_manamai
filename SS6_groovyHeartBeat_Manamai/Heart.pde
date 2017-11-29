@@ -1,20 +1,17 @@
-// Example 20-2: Doorbell with Sonia
 
-// A Class to describe a "doorbell" (really a button)
+// A Class to describe a heart button
 class Heart {
   // Location and size
   float x;
   float y;
   float r;
 
-  // Create the doorbell
   Heart(float x_, float y_, float r_) {
     x = x_;
     y = y_;
     r = r_;
   }
 
-  // Is a point inside the doorbell? (used for mouse rollover, etc.)
   boolean contains(float mx, float my) {
     if (dist(mx, my, x, y) < r) {
       return true;
@@ -23,7 +20,7 @@ class Heart {
     }
   }
 
-  // Show the doorbell (hardcoded colors, could be improved)
+  // Show the heart
   void display(float mx, float my) {
     if (contains(mx, my)) {
       strokeWeight(1);
